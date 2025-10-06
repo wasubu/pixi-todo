@@ -7,9 +7,17 @@
   "type": "commonjs",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "dev": "vite",
+    "build": "vite build"
   },
   "devDependencies": {
-    "electron": "^38.2.1"
+    "@vitejs/plugin-react": "^5.0.4",
+    "electron": "^38.2.1",
+    "vite": "^7.1.9"
+  },
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
   }
 }

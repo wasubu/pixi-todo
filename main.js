@@ -1,22 +1,3 @@
-console.log("hello world")
-
-/*const electron = require("electron")
-const app = electron.app // know app starts, quits, or becomes active.
-const BrowserWindow = electron.BrowserWindow // create and control app windows
-const path = require("path") // work with directories safely
-const url = require("url") // module for parsing, formatting, and resolving URLs
-
-let win
-
-function createWindow() {
-    win = new BrowserWindow()
-    win.loadURL(url.format({
-        pathname: path.join(__dirname, "index.html"),
-        protocol: "file",
-        slashes: true
-    }))
-}*/
-
 const electron = require("electron")
 const app = electron.app // know app starts, quits, or becomes active.
 const BrowserWindow = electron.BrowserWindow // create and control app windows
@@ -31,7 +12,12 @@ function createWindow() {
             contextIsolation: false
         }
     })
-    win.loadFile(path.join(__dirname, 'index.html'))
+    const isDev = !app.isPackaged;
+    if (isDev) {
+        win.loadURL('http://localhost:5173');
+    } else {
+        win.loadFile(path.join(__dirname, 'dist', 'index.html'));
+    }
 }
 
 app.whenReady().then(createWindow)
