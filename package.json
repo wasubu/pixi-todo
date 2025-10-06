@@ -1,0 +1,20 @@
+{
+  "name": "pixi-todo",
+  "version": "1.0.0",
+  "description": "Hi there is nothing here yet",
+  "homepage": "https://github.com/wasubu/pixi-todo#readme",
+  "bugs": {
+    "url": "https://github.com/wasubu/pixi-todo/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wasubu/pixi-todo.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
